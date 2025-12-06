@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [{"path": "./tsconfig.app.json"}, {"path": "./tsconfig.node.json"}],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowJs": true,
+    "checkJs": false, // 关闭 JS 文件类型检查
+    "skipLibCheck": true
+  }
+}
