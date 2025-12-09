@@ -12,6 +12,7 @@ export default function ToDoList(props) {
   return (
     <>
       <input
+        //新增功能
         type="text"
         placeholder="请输入任务"
         onKeyUp={(e) => {
@@ -43,6 +44,7 @@ export default function ToDoList(props) {
               <div>
                 <label>
                   <input
+                    //选中功能
                     type="checkbox"
                     onChange={(e) => {
                       if (e.target.checked) {
@@ -55,6 +57,7 @@ export default function ToDoList(props) {
                 <span>{item}</span>{" "}
                 <span>
                   <button
+                    //删除功能
                     onClick={(e) => {
                       console.log(e);
                       console.log(item);
