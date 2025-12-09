@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# react-project
-学习react时期的项目
-=======
 react 学习项目
 第一周: 基础语法
 jsx 语法
@@ -14,4 +10,3 @@ props
 子传父
 状态提升
 context 机制
->>>>>>> feature/react
