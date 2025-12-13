@@ -1,0 +1,60 @@
+/* ========== UseEffect 组件样式 ========== */
+.useeffect-container {
+  width: 100%;
+  padding: 28px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #f9f7f4;
+  border-radius: 12px;
+  border: 1px solid #e5e0d8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #2d3748;
+}
+
+.useeffect-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c5f2d;
+  border-bottom: 1px solid #e8f4ea;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+/* 频道列表容器 */
+.useeffect-list-wrapper {
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 频道列表项 */
+.useeffect-list-item {
+  padding: 8px 16px;
+  background-color: #edf2f7;
+  border-radius: 6px;
+  color: #2d3748;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.useeffect-list-item:hover {
+  background-color: #e8f4ea;
+  color: #2c5f2d;
+  transform: scale(1.03);
+}
+
+/* 加载/空数据提示 */
+.useeffect-empty-tip {
+  color: #9f7aea;
+  font-style: italic;
+  font-size: 14px;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+}
