@@ -1,0 +1,150 @@
+/* 全局 CSS 样式 - Redux 组件专用 */
+.redux-container {
+  width: 100%;
+  padding: 28px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #f9f7f4;
+  border-radius: 12px;
+  border: 1px solid #e5e0d8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #2d3748;
+}
+
+.redux-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c5f2d;
+  border-bottom: 1px solid #e8f4ea;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+/* 计数器容器 */
+.redux-counter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* 按钮通用样式 */
+.redux-base-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 60px;
+}
+
+/* 减号按钮 */
+.redux-minus-btn {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.redux-minus-btn:hover {
+  background-color: #dee2e6;
+  transform: scale(1.02);
+}
+
+/* 加号按钮 */
+.redux-plus-btn {
+  background-color: #e8f4ea;
+  color: #2c5f2d;
+}
+
+.redux-plus-btn:hover {
+  background-color: #d1e7dd;
+  transform: scale(1.02);
+}
+
+/* 计数器数值 */
+.redux-counter-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c5f2d;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* 自定义数值按钮容器 */
+.redux-custom-btn-wrapper {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* 自定义数值按钮 */
+.redux-custom-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* +10 按钮 */
+.redux-add10-btn {
+  background-color: #fff380;
+  color: #2d3748;
+}
+
+.redux-add10-btn:hover {
+  background-color: #ffee58;
+}
+
+/* +20 按钮 */
+.redux-add20-btn {
+  background-color: #ffe5e5;
+  color: #2d3748;
+}
+
+.redux-add20-btn:hover {
+  background-color: #ffcdd2;
+}
+
+/* 频道列表容器 */
+.redux-channel-list-wrapper {
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* 频道列表 */
+.redux-channel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 列表项 */
+.redux-channel-item {
+  padding: 8px 16px;
+  background-color: #edf2f7;
+  border-radius: 6px;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+/* 空列表提示 */
+.redux-empty-tip {
+  color: #9f7aea;
+  font-style: italic;
+  font-size: 14px;
+  padding: 8px 0;
+}
