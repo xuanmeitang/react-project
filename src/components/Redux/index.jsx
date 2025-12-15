@@ -1,5 +1,5 @@
 import {useSelector, useDispatch} from "react-redux";
-import {increment, decrement, addNumber} from "@/store/modules/counteStore";
+import {increment, decrement, addNumber} from "@/store/modules/counterStore";
 import {getChannelList} from "@/store/modules/asyncRequest";
 import {useEffect} from "react";
 // 导入全局 CSS 文件（和你的项目导入方式一致）
@@ -16,10 +16,8 @@ export default function Redux() {
 
   return (
     <div className="redux-container">
-      {/* 标题 */}
       <div className="redux-title">Redux 组件</div>
 
-      {/* 计数器操作区域 */}
       <div className="redux-counter-wrapper">
         <button
           className="redux-base-btn redux-minus-btn"

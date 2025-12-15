@@ -8,10 +8,17 @@ import App from "@/App";
 import {Ctx} from "@/api/context";
 import {Provider} from "react-redux";
 import store from "@/store/index";
+import Login from "@/components/Login";
+import {AuthRoute} from "@/components/AuthRoute";
+import {Navigate} from "react-router-dom";
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
+    path: "home",
+    element: (
+      <AuthRoute>
+        <App />
+      </AuthRoute>
+    ),
     children: [
       {
         index: true,
@@ -31,17 +38,26 @@ const router = createBrowserRouter([
       },
       {
         path: "redux",
-        element: (
-          <Provider store={store}>
-            <Redux />
-          </Provider>
-        ),
+        element: <Redux />,
       },
       {
         path: "useEffect",
         element: <UseEffect />,
       },
     ],
+  },
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
+    path: "/",
+    element: (
+      <Navigate
+        to="/login"
+        replace
+      />
+    ),
   },
   {
     path: "*",
