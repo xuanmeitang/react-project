@@ -10,7 +10,9 @@ import {Provider} from "react-redux";
 import store from "@/store/index";
 import Login from "@/components/Login";
 import {AuthRoute} from "@/components/AuthRoute";
-import {Navigate} from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import Ref from "@/page/Ref"; 
+
 const router = createBrowserRouter([
   {
     path: "home",
@@ -43,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "useEffect",
         element: <UseEffect />,
+      },
+      {
+        path: "ref",
+        element: <Ref />,
       },
     ],
   },

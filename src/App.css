@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* 全局样式重置 */
@@ -137,8 +137,22 @@ nav li:active {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: #ffffff;
+  max-width: 100vw;
+}
+
+/* 内容区域 */
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: calc(100vh - 88px);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* 内容头部 */

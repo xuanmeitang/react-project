@@ -1,11 +1,13 @@
 import "@/App.css";
 import {Outlet} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
-import request from "@/utils/request";
+import Search from "@/components/Search";
+
 function App() {
   const navigate = useNavigate();
   return (
     <div className="app-container">
+ 
       {/* 侧边栏导航 - 保持不变 */}
       <aside className="sidebar">
         <div className="sidebar-header">
@@ -34,6 +36,10 @@ function App() {
               <span className="nav-icon">🔑</span>
               <span className="nav-text">useEffect组件</span>
             </li>
+            <li onClick={() => navigate("/home/ref")}>
+              <span className="nav-icon">🔗</span>
+              <span className="nav-text">Ref组件</span>
+            </li>
           </ul>
         </nav>
 
@@ -53,6 +59,7 @@ function App() {
 
         <div className="content-area">
           <Outlet />
+          <Search />
         </div>
       </main>
     </div>

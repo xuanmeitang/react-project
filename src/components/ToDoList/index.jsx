@@ -27,52 +27,52 @@ export default function ToDoList(props) {
 
   return (
     <div className="todo-list">
-      {/* 输入框 */}
-      <input
-        className="todo-input"
-        type="text"
-        placeholder="请输入任务"
-        onKeyUp={(e) => {
-          if (e.key === "Enter") {
-            const value = e.target.value.trim();
-            if (value) {
-              props.getValue?.(value); // 可选链避免报错
-              setList((prev) => [value, ...prev]); // 不可变更新
-              e.target.value = "";
+        {/* 输入框 */}
+        <input
+          className="todo-input"
+          type="text"
+          placeholder="请输入任务"
+          onKeyUp={(e) => {
+            if (e.key === "Enter") {
+              const value = e.target.value.trim();
+              if (value) {
+                props.getValue?.(value); // 可选链避免报错
+                setList((prev) => [value, ...prev]); // 不可变更新
+                e.target.value = "";
+              }
             }
-          }
-        }}
-      />
+          }}
+        />
 
-      {/* 任务列表 */}
-      <ul className="todo-list-container">
-        {list.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className="todo-list-item"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}>
-              <input
-                className="todo-checkbox"
-                type="checkbox"
-                data-index={index} // 标记索引，方便删除时判断
-                onChange={handleCheckboxChange}
-              />
-              <span className="todo-item-text">{item}</span>
-              <button
-                className="todo-delete-btn"
-                onClick={() => handleDelete(index)}>
-                删除
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+        {/* 任务列表 */}
+        <ul className="todo-list-container">
+          {list.map((item, index) => {
+            return (
+              <li
+                key={index}
+                className="todo-list-item"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}>
+                <input
+                  className="todo-checkbox"
+                  type="checkbox"
+                  data-index={index} // 标记索引，方便删除时判断
+                  onChange={handleCheckboxChange}
+                />
+                <span className="todo-item-text">{item}</span>
+                <button
+                  className="todo-delete-btn"
+                  onClick={() => handleDelete(index)}>
+                  删除
+                </button>
+              </li>
+            );
+          })}
+        </ul>
 
-      {/* 统计信息 */}
-      <div className="todo-statistics">
-        已完成 <span>{count}</span> / 全部 <span>{list.length}</span>
+        {/* 统计信息 */}
+        <div className="todo-statistics">
+          已完成 <span>{count}</span> / 全部 <span>{list.length}</span>
       </div>
     </div>
   );
